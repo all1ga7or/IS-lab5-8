@@ -1,0 +1,126 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $secondary-color;
+  color: $dark-color;
+}
+
+.hero {
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $light-color;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    h1 {
+      font-size: $font-size-xlarge;
+      margin: 0;
+    }
+  }
+}
+
+.brands {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  background-color: $light-color;
+  img {
+    height: 50px;
+  }
+}
+
+.latest-collection {
+  padding: 20px;
+  background-color: $light-color;
+  h2 {
+    font-size: $font-size-large;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .products {
+    display: flex;
+    justify-content: space-around;
+    .product {
+      border: 1px solid $border-color;
+      padding: 10px;
+      text-align: center;
+      img {
+        width: 100px;
+        height: auto;
+      }
+      button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: $primary-color;
+        color: $light-color;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.shop-by-sport {
+  background-color: $primary-color;
+  padding: 20px;
+  h2 {
+    font-size: $font-size-large;
+    text-align: center;
+    color: $light-color;
+  }
+  .sports {
+    display: flex;
+    justify-content: space-around;
+    .sport {
+      text-align: center;
+      span {
+        display: block;
+        margin-top: 10px;
+        color: $light-color;
+        font-size: $font-size-medium;
+      }
+    }
+  }
+}
+
+.newsletter {
+  padding: 20px;
+  background-color: $highlight-color;
+  h2 {
+    font-size: $font-size-large;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input[type="text"], input[type="email"] {
+      width: 300px;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+    }
+    input[type="checkbox"] {
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: $primary-color;
+      color: $light-color;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+}

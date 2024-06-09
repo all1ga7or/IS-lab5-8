@@ -1,0 +1,92 @@
+main
+  .breadcrumb
+    a(href="#") football /
+    a(href="#") shoes /
+    span adidas Predator League FG
+
+  .product-detail
+    .product-gallery
+      img(src="path/to/product-image.jpg" alt="adidas Predator League FG")
+      .thumbnails
+        img(src="path/to/thumb1.jpg" alt="thumbnail 1")
+        img(src="path/to/thumb2.jpg" alt="thumbnail 2")
+        img(src="path/to/thumb3.jpg" alt="thumbnail 3")
+
+    .product-info
+      h1 adidas Predator League FG
+      p Product id: SKU180404
+      p.price 50€
+      .color
+        label Choose the color:
+        img(src="path/to/color-image.jpg" alt="color option")
+      .size
+        label Choose the size:
+        select(name="size")
+          option(value="small") Small
+          option(value="medium") Medium
+          option(value="large") Large
+      .quantity
+        button - 1 +
+      button.add-to-cart Add to cart
+      button.add-to-wishlist Add to wishlist
+
+  .tabs
+    ul
+      li: a(href="#") you may also like
+      li: a(href="#") description
+      li: a(href="#") specifications
+      li: a(href="#") related products
+      li: a(href="#") reviews
+
+  .recommendations
+    h2 You may also like
+    .products
+      each product in products
+        .product
+          img(src=product.image alt=product.name)
+          p.name= product.name
+          p.price= product.price
+          button.add-to-cart Add to cart
+
+  .description
+    h2 Product Description:
+    p The adidas Predator League FG soccer cleats are designed for dominating the pitch on firm ground surfaces...
+
+  .specifications
+    h2 Product Specifications:
+    ul
+      li SKU: SKU180404
+      li Brand: adidas
+      li Gender: Men, Women
+      // Add other specifications
+
+  .related-products
+    h2 Nice to add
+    .products
+      each product in products
+        .product
+          img(src=product.image alt=product.name)
+          p.name= product.name
+          p.price= product.price
+          button.add-to-cart Add to cart
+
+  .reviews
+    h2 Reviews (0)
+    .review-form
+      .rating
+        p Rating
+        .stars ★★★★★
+      form
+        select(name="review-type")
+          option(value="review") Review
+          option(value="question") Question
+        input(type="text" name="name" placeholder="your name")
+        textarea(name="review" placeholder="review / question")
+        button(type="submit") Submit
+    .review-list
+      each review in reviews
+        .review
+          .review-header
+            span.name= review.name
+            span.date= review.date
+          .review-body= review.text
